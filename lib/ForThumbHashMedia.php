@@ -119,7 +119,7 @@ final class ForThumbHashMedia
         if (is_object($ep->getParam('media')) && $ep->getParam('media') instanceof rex_sql) {
             $thumbhash = $ep->getParam('media')->getValue('thumbhash');
             if (null !== $thumbhash && '' !== $thumbhash) {
-                $subject .= '<br><p><strong>ThumbHash</strong>:<br>' . $thumbhash . '<p>';
+                $subject .= '<br><p><strong>ThumbHash</strong>:<br>' . $thumbhash . '</p>';
             }
 
             $thumbhashimg = $ep->getParam('media')->getValue('thumbhashimg');
