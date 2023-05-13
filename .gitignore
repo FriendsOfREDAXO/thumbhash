@@ -1,3 +1,6 @@
+# ignore TODO
+.TODO.txt
+
 .DS_Store
 .definition
 .dislap
@@ -12,3 +15,6 @@ modules.xml
 .idea/vcs.xml
 .idea/encodings.xml
 *.ipr
+
+# VSCode setting
+.vscode

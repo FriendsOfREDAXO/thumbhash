@@ -1,8 +1,14 @@
-package: addon_key
-version: '0.0.0'
+package: thumbhash
+version: 1.0.0
 author: 'Friends Of REDAXO'
-supportpage: https://github.com/FriendsOfREDAXO/addon_key
+supportpage: 'https://github.com/FriendsOfREDAXO/thumbhash'
+
+console_commands:
+  'thumbhash:clear': rex_command_thumbhash_clear
+  'thumbhash:create': rex_command_thumbhash_create
+
 requires:
-    redaxo: '^5.13.0'
-    php:
-        version: '>=7.3, <9'
+  php:
+    version: '>=8.0, <8.3' # benötigt mindestens PHP 8.0
+    extensions: [gd]
+  redaxo: '^5.13' # benötigt mindestens REDAXO 5.13
