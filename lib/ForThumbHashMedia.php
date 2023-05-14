@@ -99,13 +99,13 @@ final class ForThumbHashMedia
 
     /**
      * Show ThumbHash+ThumbImage in MediaPool-Detail.
-     * @param rex_extension_point<array<string, string>> $ep
+     * @param rex_extension_point<string> $ep
      * @api
      */
     public static function mediapoolDetailOutput(rex_extension_point $ep): string
     {
 
-        $subject = (string) $ep->getSubject(); /** @phpstan-ignore-line */
+        $subject = $ep->getSubject();
 
         $media_filename = $ep->getParam('filename');
         if (!is_string($media_filename)) {
