@@ -1,6 +1,6 @@
 # thumbhash - Changelog
 
-## Version 1.0.0 - xx.05.2023
+## Version 1.0.0 - 14.05.2023
 
 **Platzhalter für Bilder generieren mit ThumbHash.JS und ThumbHash.PHP**
 
