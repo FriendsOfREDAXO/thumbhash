@@ -38,13 +38,13 @@ Für folgende Bildformate können _ThumbHashes_ erstellt werden:
 'jpeg', 'jpg', 'png', 'gif', 'bmp', 'wbmp', 'webp'
 ```
 
-** Beispiel thumbhash**
+**Beispiel thumbhash**
 
 ```
 n/cJJYZRiHdReHmwd1h6VnVwXAfH
 ```
 
-** Beispiel thumbhashimg**
+**Beispiel thumbhashimg**
 
 ```
 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAXCAYAAABqBU3hAAAMEElEQVR4AQCBAH7/AAALLP8ADCz/AA4u/wAQL/8AEjH/ ...
