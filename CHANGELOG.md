@@ -1,5 +1,17 @@
 # thumbhash - Changelog
 
+## Version 1.0.1 - 29.07.2023
+
+### Neu
+
+* `uninstall.php` hinzugefügt, Felder aus Medienpool-Tabelle löschen
+* `lib/ForThumbHash.php` Code-Quality rexfactor+rexstan
+
+### Bugfixes
+
+* Typo's in README.md
+* bei Anzeige im Medienpool thumbhash generieren falls noch nicht vorhanden und sofort anzeigen (damit man auch gleich sieht dass das AddOn aktiv ist), #1
+
 ## Version 1.0.0 - 14.05.2023
 
 **Platzhalter für Bilder generieren mit ThumbHash.JS und ThumbHash.PHP**
