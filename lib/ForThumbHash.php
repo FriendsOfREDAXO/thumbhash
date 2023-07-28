@@ -171,10 +171,15 @@ final class ForThumbHash
         $sql = rex_sql::factory();
         $sql->setDebug(false);
         $sql->setQuery('UPDATE `' . rex::getTable('media') . "` SET `thumbhash` = '', `thumbhashimg` = ''");
-        if ($sql->hasError()) {
-            return $sql->getError();
+
+        if (!$sql->hasError()) {
+            return true;
         }
 
-        return true;
+        if (null === $sql->getError()) {
+            return true;
+        }
+
+        return $sql->getError();
     }
 }
