@@ -104,12 +104,17 @@ final class ForThumbHashMedia
      */
     public static function mediapoolDetailOutput(rex_extension_point $ep): string
     {
-
         $subject = $ep->getSubject();
 
         $media_filename = $ep->getParam('filename');
+        $media_id = $ep->getParam('id');
+
         if (!is_string($media_filename)) {
             throw new Exception('Media-FileName is no string.');
+        }
+
+        if (!is_int($media_id)) {
+            throw new Exception('Media-ID is no integer.');
         }
 
         if (!in_array(rex_file::extension($media_filename), self::IMAGE_TYPES, true)) {
@@ -118,13 +123,22 @@ final class ForThumbHashMedia
 
         if (is_object($ep->getParam('media')) && $ep->getParam('media') instanceof rex_sql) {
             $thumbhash = $ep->getParam('media')->getValue('thumbhash');
+            $thumbhashimg = $ep->getParam('media')->getValue('thumbhashimg');
+
+            if (null === $thumbhash && null === $thumbhashimg) {
+                $path = rex_path::media($media_filename);
+                $thumbhashdata = self::generateMediaThumbhash($path);
+                self::updateMediaThumbhash($media_id, $thumbhashdata['thumbhash'], $thumbhashdata['thumbhashimg']);
+                $thumbhash = $thumbhashdata['thumbhash'];
+                $thumbhashimg = $thumbhashdata['thumbhashimg'];
+            }
+
             if (null !== $thumbhash && '' !== $thumbhash) {
                 $subject .= '<br><p><strong>ThumbHash</strong>:<br>' . $thumbhash . '</p>';
             }
 
-            $thumbhashimg = $ep->getParam('media')->getValue('thumbhashimg');
             if (null !== $thumbhashimg && '' !== $thumbhashimg) {
-                $subject .= '<img src="' . $ep->getParam('media')->getValue('thumbhashimg') . '" />';
+                $subject .= '<img src="' . $thumbhashimg . '" />';
             }
         }
 
