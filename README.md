@@ -264,13 +264,13 @@ Aufruf in Modulen usw. z.B. wie folgt
 | getScript() | Liefert das Standard-Script zur Inline-Verwendung | void | string $script |
 | getScriptTag() | Liefert das Standard-Script als Script-Tag | void | string $scripttag |
 | createThumbHashes() | ThumbHashes für alle gültigen Bilder erstellen und im Medienpool speichern | void | int $count |
-| clearThumbHashes()() | alle gespeicherten ThumbHashes löschen | void | string $error|true |
+| clearThumbHashes() | alle gespeicherten ThumbHashes löschen | void | string $error / true |
 
 > **Hinweis:** Die beiden Methoden `getThumbHashForFile()` und `getThumbHashImgForFile()` können für Bilddateien ausserhalb des Medienpools verwendet werden. Hier muss der komplette Pfad angegeben werden.
 
 ## Empfehlungen / Sonstiges
 
-* Bilder immer mit `width`m `height` `loading="lazy"`und ausgeben
+* Bilder immer mit `width`, `height` und `loading="lazy"` ausgeben
 * PHP-Klasse `ForThumbHash` für den Zugriff verwenden
 * JavaScript am Seitenende _vor_ anderen Scripten einbinden
 
