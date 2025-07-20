@@ -128,10 +128,9 @@ final class ForThumbHash
 
     /**
      * Create all ThumbHash-Data in MediaPool.
-     * @return int
      * @api
      */
-    public static function createThumbHashes()
+    public static function createThumbHashes(): int
     {
         $tcount = 0;
 
