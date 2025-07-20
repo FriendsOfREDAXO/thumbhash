@@ -34,7 +34,7 @@ final class rex_command_thumbhash_create extends rex_console_command
 
         $tcount = \FriendsOfRedaxo\ThumbHash\ForThumbHash::createThumbHashes();
 
-        $io->success('Successfully created ThumbHashes for ' . $tcount. ' files!');
+        $io->success('Successfully created ThumbHashes for ' . $tcount . ' files!');
         return 0;
     }
 }
