@@ -1,5 +1,5 @@
 package: thumbhash
-version: 1.0.1
+version: 1.1.0
 author: 'Friends Of REDAXO'
 supportpage: 'https://github.com/FriendsOfREDAXO/thumbhash'
 
@@ -9,6 +9,6 @@ console_commands:
 
 requires:
   php:
-    version: '>=8.0, <8.3' # benötigt mindestens PHP 8.0
+    version: '>=8.0, <9' # benötigt mindestens PHP 8.0
     extensions: [gd]
   redaxo: '^5.13' # benötigt mindestens REDAXO 5.13
