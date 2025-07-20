@@ -1,5 +1,11 @@
 # thumbhash - Changelog
 
+## Version 1.0.0 - 20.07.2025
+
+* Update LICENSE @tyrant88
+* Thumbhash.php Version 1.4
+* PHP Maximalversion auf <9 gesetzt @aeberhard
+
 ## Version 1.0.1 - 29.07.2023
 
 ### Neu
